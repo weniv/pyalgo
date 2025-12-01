@@ -1105,3 +1105,132 @@ footer p {
     display: none;
   }
 }
+
+/* 인증서 */
+.certif-btn {
+  width: 4.2rem;
+  height: 4.2rem;
+  margin-right: 1.6rem;
+  background: url("../img/icon/icon-medal.svg") no-repeat center / 2.8rem;
+  border-radius: 1rem;
+
+  &:hover,
+  &.active {
+    background-color: #3b4d7d;
+  }
+}
+.certif-modal {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 2.8rem;
+
+  top: 6.5rem;
+  right: 2rem;
+  width: 34rem;
+  border-radius: 1rem;
+  padding: 4rem 2.4rem 3.2rem;
+  background-color: var(--ColorWhite);
+  color: var(--ColorDark);
+  &.active {
+    display: flex;
+  }
+}
+.certif-modal h2 {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+}
+
+.progress {
+  display: flex;
+  position: relative;
+  padding: 3.2rem 0 0;
+  gap: 1.2rem;
+}
+.progress .sub-tit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+}
+
+.progress .solved-count {
+  min-width: 6.2rem;
+  height: 2.4rem;
+  padding: 0 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  background-color: var(--ColorActivation);
+  color: var(--ColorPrimary);
+  border-radius: 0.4rem;
+  text-align: center;
+
+  & .solved {
+    font-weight: 700;
+  }
+}
+
+.progress .solved-progressbar {
+  background-color: var(--ColorGrayLv2);
+  height: 1.2rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+
+  & .solved-progressbar-inner {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    background-color: var(--ColorGrayLv4);
+  }
+}
+
+.label-username {
+  display: none;
+  margin-top: -0.8rem;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-weight: 600;
+
+  &.active {
+    display: flex;
+  }
+
+  input {
+    border: 1px solid var(--ColorGrayLv2);
+    padding: 1.1rem 2rem;
+    border-radius: 1rem;
+    &::placeholder {
+      color: var(--ColorGrayLv3);
+    }
+  }
+}
+
+.certif-download-btn {
+  background-color: var(--ColorPrimary);
+  padding: 1.1rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  color: var(--ColorBackground);
+  cursor: pointer;
+  &:disabled {
+    background-color: var(--ColorGrayLv2);
+  }
+}
+
+.certif-modal .close-btn {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 1.6rem;
+  right: 1.6rem;
+  background: url("../img/icon/icon-X.svg") no-repeat center / 1.6rem;
+}
