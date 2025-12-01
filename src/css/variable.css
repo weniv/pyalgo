@@ -14,4 +14,16 @@
 	--codeText: #ffd700;
 	--codeSyntex: #569cd6;
 	--codeBuiltinfunction: #ccaaff;
+
+	/* design system color */
+	--ColorPrimary: #2f6ff2;
+	--ColorBackground: #ffffff;
+	--ColorSurface: #121314;
+	--ColorGrayLv1: #f3f5fa;
+	--ColorGrayLv2: #d9dbe0;
+	--ColorGrayLv3: #8d9299;
+	--ColorGrayLv4: #47494d;
+	--ColorError: #ff3440;
+	--ColorLowError: #ffc533;
+	--ColorActivation: #dee8ff;
 }

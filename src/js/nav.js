@@ -5,7 +5,6 @@ const elements = {
   nav: document.querySelector(".question-nav"),
   codeMirror: document.querySelector(".CodeMirror"),
   btnMenu: document.querySelector(".hamburger-btn"),
-  icon: document.querySelector(".hamburger-btn img"),
   menuContainer: document.querySelector(".menu-list"),
 };
 
@@ -16,11 +15,6 @@ const state = {
 
 const toggleActiveState = () => {
   state.isActive = !state.isActive;
-  const imgSrc = state.isActive ? "src/img/close.webp" : "src/img/hamburger-btn.webp";
-  const imgAlt = state.isActive ? "메뉴 닫기" : "메뉴 열기";
-
-  elements.icon.src = imgSrc;
-  elements.icon.alt = imgAlt;
 };
 
 const handleCloseQuestions = () => {
@@ -54,10 +48,8 @@ const handleToggleMenu = () => {
   toggleActiveState();
 
   if (state.isActive) {
-      elements.icon.classList.add("close");
       elements.menuContainer.classList.add("active");
   } else {
-      elements.icon.classList.remove("close");
       elements.menuContainer.classList.remove("active");
   }
 
@@ -68,8 +60,7 @@ const handleToggleMenu = () => {
 
 const handleCloseMenu = () => {
   elements.menuContainer.classList.remove("active");
-  elements.icon.classList.remove("close");
-  elements.icon.src = "src/img/hamburger-btn.webp";
+  elements.btnMenu.classList.remove("is-active");
   state.isActive = false;
 };
 
