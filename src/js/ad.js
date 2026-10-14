@@ -1,16 +1,6 @@
 // 광고 변경 시, 아래 kgData만 변경하면 됩니다. 순서는 데이터 작성 순으로 적용됩니다.
 const kgData = [
   {
-    img: "./src/img/kg/ad__KR_1.png",
-    link: "https://www.books.weniv.co.kr/",
-    content: "위니브 북스",
-  },
-  {
-    img: "./src/img/kg/ad__KR_2.png",
-    link: "https://discord.gg/MASRTmyu8a",
-    content: "위니브 디스코드",
-  },
-  {
     img: "./src/img/kg/ad__KR_3.png",
     link: "https://weniversity.co.kr/",
     content: "위니버시티",

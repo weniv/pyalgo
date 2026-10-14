@@ -1,0 +1,343 @@
+/* 위니버시티 안내: 헤더 버튼 · 채점 결과 아래 카드 · 처음 방문 안내 창 · 메뉴 */
+
+/* 헤더 버튼 */
+header .wv-cta {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.6rem;
+  height: 3.8rem;
+  margin-right: 1.6rem;
+  padding: 0 1.6rem;
+  border-radius: 99rem;
+  background: #2e6ff2;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+header .wv-cta:hover {
+  background: #145df0;
+}
+
+header .wv-cta:focus-visible {
+  outline: 3px solid #ffd466;
+  outline-offset: 2px;
+}
+
+header .wv-cta svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+header .wv-cta .wv-cta__short {
+  display: none;
+}
+
+/* 좁은 화면: 로고가 줄어들어 버튼이 화면 밖으로 밀리지 않게 */
+@media (max-width: 600px) {
+  header > div {
+    width: 100%;
+    margin: 0;
+    padding: 0 1.2rem 0 6.4rem;
+  }
+
+  header h1 {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: none;
+    overflow: hidden;
+  }
+
+  header h1 .logo {
+    width: auto;
+    max-width: 100%;
+    max-height: 2.6rem;
+  }
+
+  header .btn-fold {
+    left: 1.2rem;
+  }
+
+  header .certif-btn {
+    flex-shrink: 0;
+    margin-right: 0.8rem;
+  }
+
+  header .hamburger-btn {
+    flex-shrink: 0;
+  }
+
+  /* 기존 규칙(390px 이하 .btn-exec 절대 위치)이 메뉴 항목을 겹치게 해서 되돌린다 */
+  .menu-list .menu-item .btn-exec {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  header .wv-cta {
+    height: 3.4rem;
+    margin-right: 0.8rem;
+    padding: 0 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  header .wv-cta .wv-cta__long {
+    display: none;
+  }
+
+  header .wv-cta .wv-cta__short {
+    display: inline;
+  }
+
+  header .wv-cta svg {
+    display: none;
+  }
+}
+
+/* 메뉴: 위니버시티 항목 */
+.menu-item .btn-wv::before {
+  content: "";
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.8rem;
+  background: url("../img/icon/icon-link.svg") no-repeat 50% 50% / contain;
+}
+
+.menu-list .menu-item .btn-wv.is-primary {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* 채점 결과 아래 카드 */
+.wv-card {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 14rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  background: #2e6ff2;
+  color: #fff;
+}
+
+.wv-card__text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 2rem 2.4rem;
+}
+
+.wv-card__eyebrow {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.wv-card__title {
+  font-size: clamp(1.6rem, 1.3vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.wv-card__desc {
+  font-size: 1.3rem;
+  line-height: 1.55;
+  opacity: 0.9;
+  word-break: keep-all;
+}
+
+.wv-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 99rem;
+  background: #fff;
+  color: #2e6ff2;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.wv-card__btn:hover {
+  transform: translateX(2px);
+}
+
+.wv-card__btn:focus-visible {
+  outline: 3px solid #ffd466;
+  outline-offset: 2px;
+}
+
+.wv-card__art {
+  flex: 0 0 auto;
+  width: 30%;
+  max-width: 18rem;
+  object-fit: cover;
+  object-position: 35% center;
+}
+
+@media (max-width: 480px) {
+  .wv-card__art {
+    display: none;
+  }
+}
+
+/* 처음 방문 안내 창 */
+.wv-notice,
+.wv-notice *,
+.wv-card,
+.wv-card *,
+header .wv-cta {
+  box-sizing: border-box;
+}
+
+.wv-notice {
+  position: fixed;
+  right: 2.4rem;
+  bottom: 2.4rem;
+  z-index: 1000;
+  width: min(38rem, calc(100vw - 3.2rem));
+  padding: 2.4rem;
+  border-radius: 1.6rem;
+  background: #fff;
+  color: #121314;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.wv-notice.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+.wv-notice.is-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+@media (max-width: 600px) {
+  .wv-notice {
+    right: 1.6rem;
+    bottom: 1.6rem;
+    padding: 2rem;
+  }
+}
+
+.wv-notice__close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wv-notice__close:hover {
+  background: #f3f5fa;
+}
+
+.wv-notice__close svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: none;
+  stroke: #47494d;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.wv-notice__eyebrow {
+  color: #2e6ff2;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.wv-notice__title {
+  display: block;
+  margin-top: 0.6rem;
+  padding-right: 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.wv-notice__desc {
+  margin-top: 0.8rem;
+  color: #47494d;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.wv-notice__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+}
+
+.wv-notice__go,
+.wv-notice__stay {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.2rem;
+  padding: 0 1.6rem;
+  border-radius: 0.8rem;
+  font: inherit;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.wv-notice__go {
+  flex: 1 1 auto;
+  border: 0;
+  background: #2e6ff2;
+  color: #fff;
+}
+
+.wv-notice__go:hover {
+  background: #145df0;
+}
+
+.wv-notice__stay {
+  border: 1px solid #d9dbe0;
+  background: #fff;
+  color: #47494d;
+}
+
+.wv-notice__stay:hover {
+  background: #f3f5fa;
+}
+
+.wv-notice a:focus-visible,
+.wv-notice button:focus-visible {
+  outline: 3px solid #2e6ff2;
+  outline-offset: 2px;
+}

@@ -40,7 +40,7 @@
     <script src="./src/js/parser.js" defer></script>
     <script src="./src/js/event.js" defer></script>
     <script src="./src/js/nav.js" defer></script>
-    <script src="./src/js/ad.js" defer></script>
+    <script src="./src/js/weniversity.js" data-name="Python Algorithm Best 20" data-set="best20" data-lang="python" data-max="20" defer></script>
     <script src="./src/js/timer.js" defer></script>
      <!-- markdown -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.min.css">
@@ -75,6 +75,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/weniversity.css">
 </head>
 
 <body>
@@ -86,6 +87,7 @@
                         <img class="logo" src="./src/img/py-logo.webp" alt="파이썬 알고리즘 20문제">
                     </a>
                 </h1>
+                <a class="wv-cta" data-wv-problem data-wv-track="헤더 > 위니버시티에서 풀기" href="https://weniversity.co.kr/tools/algo/"><span class="wv-cta__long">위니버시티에서 풀기</span><span class="wv-cta__short">위니버시티</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 <button class="certif-btn">
                   <span class="sr-only">인증서</span>
                 </button>
@@ -118,31 +120,15 @@
                         <button class="btn-download">Solution Download</button>
                       </li>
                       <li class="menu-item">
-                        <a class="btn-exec" href="https://jupyter.weniv.co.kr/" target="_blank">jupyter notebook</a>
-                      </li>
-                      <li class="menu-item">
-                        <a class="btn-exec" href="https://notebook.weniv.co.kr/" target="_blank">weniv notebook</a>
+                        <a class="btn-exec" href="https://weniversity.co.kr/tools/notebook/" target="_blank" data-wv-track="메뉴 > 위니버시티 노트북">위니버시티 노트북</a>
                       </li>
                     </ul>
                     <hr>
-                    <p class="menu-title">관련 교육 서비스</p>
+                    <p class="menu-title">위니버시티</p>
                     <ul>
-                      <li class="menu-item"><a href="https://100.pyalgo.co.kr/" target="_blank" rel="noopener noreferrer">pyalgo 100</a></li>
-                      <li class="menu-item"><a href="https://pyalgo.co.kr/" target="_blank" rel="noopener noreferrer">pyalgo 20</a></li>
-                      <li class="menu-item"><a href="https://to.pyalgo.co.kr/" target="_blank" rel="noopener noreferrer">pyalgo 7</a></li>
-                      <li class="menu-item"><a href="https://jsalgo.co.kr/" target="_blank" rel="noopener noreferrer">jsalgo 100</a></li>
-                      <li class="menu-item"><a href="https://jsalgo.co.kr/" target="_blank" rel="noopener noreferrer">jsalgo 20</a></li>
-                      <li class="menu-item"><a href="https://to.jsalgo.co.kr/" target="_blank" rel="noopener noreferrer">jsalgo 7</a></li>
-                      <li class="menu-item"><a href="https://sql.weniv.co.kr/" target="_blank" rel="noopener noreferrer">weniv SQL</a></li>
-                      <li class="menu-item"><a href="https://algoview.co.kr/" target="_blank" rel="noopener noreferrer">algoview</a></li>
-                    </ul>
-                    <hr>
-                    <p class="menu-title">위니브</p>
-                    <ul>
-                      <li class="menu-item"><a href="https://weniv.co.kr/" target="_blank" rel="noopener noreferrer">위니브 홈</a></li>
-                      <li class="menu-item"><a href="https://www.books.weniv.co.kr/" target="_blank" rel="noopener noreferrer">위니북스</a></li>
-                      <li class="menu-item"><a href="https://weniversity.co.kr/" target="_blank" rel="noopener noreferrer">위니버시티</a></li>
-                      <li class="menu-item"><a href="https://discord.com/invite/MASRTmyu8a" target="_blank" rel="noopener noreferrer">위니빌리지</a></li>
+                      <li class="menu-item"><a class="btn-wv is-primary" data-wv-problem data-wv-track="메뉴 > 이 문제 위니버시티에서 풀기" href="https://weniversity.co.kr/tools/algo/">이 문제 위니버시티에서 풀기</a></li>
+                      <li class="menu-item"><a class="btn-wv" data-wv-track="메뉴 > 알고리즘 전체 문제" href="https://weniversity.co.kr/tools/algo/">알고리즘 전체 문제</a></li>
+                      <li class="menu-item"><a class="btn-wv" data-wv-track="메뉴 > 위니버시티 홈" href="https://weniversity.co.kr/">위니버시티 홈</a></li>
                     </ul>
                   </div>
                   <button class="btn-fold" type="button">접어두기</button>
@@ -226,19 +212,15 @@
                         <div id="result_desc"></div>
                     </div>
                     
-                    <div class="kg-carousel">
-                        <ul class="kg-list"></ul>
-                        <div class="btn-cont">
-                            <button class="prev-btn">
-                                <img src="./src/img/chevron-prev.webp" alt="광고 뒤로가기"/>
-                            </button>
-                            <button class="next-btn">
-                                <img src="./src/img/chevron-next.webp" alt="광고 넘어가기"/>
-                            </button>
-                        </div>
-                        <ul class="page-list">
-                        </ul>
-                    </div>
+                    <aside class="wv-card" aria-label="위니버시티 안내">
+                      <div class="wv-card__text">
+                        <p class="wv-card__eyebrow">Python Algorithm Best 20 문제가 위니버시티로 옮겨 갔어요</p>
+                        <strong class="wv-card__title">이 문제, 위니버시티에서 이어서 풀어 보세요</strong>
+                        <p class="wv-card__desc">Python·JavaScript·Java로 풀고 바로 채점받고, 로그인하면 푼 문제가 계정에 기록돼요.</p>
+                        <a class="wv-card__btn" data-wv-problem data-wv-track="채점 결과 아래 카드" href="https://weniversity.co.kr/tools/algo/">위니버시티에서 풀기 →</a>
+                      </div>
+                      <img class="wv-card__art" src="./src/img/weniversity-art.webp" alt="" width="460" height="280">
+                    </aside>
                     <py-script>
                         import ast
                         #from testCaseAndResult import test
